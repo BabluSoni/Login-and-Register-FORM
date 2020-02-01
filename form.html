@@ -1,0 +1,78 @@
+<!-- This Form is Created By 'BABLU SONI' 
+     Language Useses (HTML, CSS, JAVASCRIPT)  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign-Up | Login </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ************************* "hero" is a main Container for FORM Box *******************************-->
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="Login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="Register()">Register</button>
+            </div>
+
+            <!--****** "Social-icon" Container contains ancor tag for facebook,twitter and google+ ******-->
+
+            <div class="social-icons">
+                <img src="fb.png" alt="Somthing Worng">
+                <img src="tw.png" alt="Somthing Worng">
+                <img src="gp.png" alt="Somthing Worng">
+            </div>
+
+            <!--********** "input-group" contains inputs in form-page (This is for LOGIN FORM ) ***********-->
+
+            <form id="Login" class="input-group" method="POST">
+                <input type="text" class="input-feild" name="Username" placeholder="Username Or Email" required>
+                <input type="password" class="input-feild" name="Password" placeholder="Password" required>
+                <input type="checkbox" class="chec-box" required><span>Remember me</span>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+
+            <!--******** "input-group" contains inputs in form-page (This is for REGISTER FORM ) *********-->
+
+            <form id="Register" class="input-group" method="POST">
+                <input type="text" class="input-feild" name="Username" placeholder="Username" required>
+                <input type="email" class="input-feild" name="Email" placeholder="Email" required>
+                <input type="password" class="input-feild" name="Password" placeholder="Password" required>
+                <input type="checkbox" class="chec-box" required><span>I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <!--******************* Script for sliding the LOGIN and REGISTER Form both **************************-->
+
+    <script>
+        var x = document.getElementById("Login")
+        var y = document.getElementById("Register")
+        var z = document.getElementById("btn")
+
+        function Register() {
+            x.style.left = "-400px"
+            y.style.left = "50px"
+            z.style.left = "110px"
+        }
+
+        function Login() {
+            x.style.left = "50px"
+            y.style.left = "450px"
+            z.style.left = "0px"
+        }
+    </script>
+
+</body>
+
+</html>
